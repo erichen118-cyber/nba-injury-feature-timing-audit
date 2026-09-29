@@ -1,0 +1,164 @@
+{
+  "master": "master_model_ready_data_corrected.csv",
+  "restriction": "gameType in {'Regular Season', 'NBA Emirates Cup'} and numMinutes > 0",
+  "n_rows": 279060,
+  "seasons": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "n_pairs": 15,
+  "pairs": [
+    [
+      "reboundsTotal",
+      "reboundPercentage"
+    ],
+    [
+      "reboundsDefensive",
+      "defensiveReboundPercentage"
+    ],
+    [
+      "reboundsOffensive",
+      "offensiveReboundPercentage"
+    ],
+    [
+      "reboundsTotal",
+      "percentTeamRebounds"
+    ],
+    [
+      "reboundsOffensive",
+      "percentTeamOffensiveRebounds"
+    ],
+    [
+      "reboundsDefensive",
+      "percentTeamDefensiveRebounds"
+    ],
+    [
+      "fieldGoalsMade",
+      "fieldGoalsPercentage"
+    ],
+    [
+      "threePointersMade",
+      "threePointersPercentage"
+    ],
+    [
+      "freeThrowsMade",
+      "freeThrowsPercentage"
+    ],
+    [
+      "assists",
+      "percentTeamAssists"
+    ],
+    [
+      "assists",
+      "assistPercentage"
+    ],
+    [
+      "steals",
+      "percentTeamSteals"
+    ],
+    [
+      "blocks",
+      "percentTeamBlocks"
+    ],
+    [
+      "turnovers",
+      "percentTeamTurnovers"
+    ],
+    [
+      "points",
+      "percentTeamPoints"
+    ]
+  ],
+  "known_defects_note": "the rebound-percentage removal (2026-09-22): the vendor's availability-denominated rebound shares are identically 0.00 on ~64% of 2015-16 and 2016-17 active appearances that recorded a nonzero rebound count. The counts are trustworthy; the percentages are not. The 18 percentage-derived predictors were dropped; the 6 count-derived ones were kept. No repair is possible from this panel. Separately, 4 isolated single-cell glitches in percentTeamBlocks and percentTeamTurnovers (2024-25, 2025-26) are recorded above; they touch no predictor and no reported number.",
+  "known_defects": {
+    "blocks|percentTeamBlocks|2024": {
+      "n": 2,
+      "rows_digest": "89047fa733978d8c"
+    },
+    "blocks|percentTeamBlocks|2025": {
+      "n": 1,
+      "rows_digest": "5b6eb2d4e239dc9f"
+    },
+    "reboundsDefensive|defensiveReboundPercentage|2015": {
+      "n": 11056,
+      "rows_digest": "54f02e2b04a15e54"
+    },
+    "reboundsDefensive|defensiveReboundPercentage|2016": {
+      "n": 11093,
+      "rows_digest": "2915b7335e2ebe74"
+    },
+    "reboundsOffensive|offensiveReboundPercentage|2015": {
+      "n": 6160,
+      "rows_digest": "a1a0e82481645b15"
+    },
+    "reboundsOffensive|offensiveReboundPercentage|2016": {
+      "n": 6004,
+      "rows_digest": "1fd4296a3718667e"
+    },
+    "reboundsTotal|reboundPercentage|2015": {
+      "n": 16570,
+      "rows_digest": "421314e5d66eda29"
+    },
+    "reboundsTotal|reboundPercentage|2016": {
+      "n": 16675,
+      "rows_digest": "2332161235d6a303"
+    },
+    "turnovers|percentTeamTurnovers|2025": {
+      "n": 1,
+      "rows_digest": "a0e37e73b91960f9"
+    }
+  },
+  "observed": {
+    "blocks|percentTeamBlocks|2024": {
+      "n": 2,
+      "rows_digest": "89047fa733978d8c"
+    },
+    "blocks|percentTeamBlocks|2025": {
+      "n": 1,
+      "rows_digest": "5b6eb2d4e239dc9f"
+    },
+    "reboundsDefensive|defensiveReboundPercentage|2015": {
+      "n": 11056,
+      "rows_digest": "54f02e2b04a15e54"
+    },
+    "reboundsDefensive|defensiveReboundPercentage|2016": {
+      "n": 11093,
+      "rows_digest": "2915b7335e2ebe74"
+    },
+    "reboundsOffensive|offensiveReboundPercentage|2015": {
+      "n": 6160,
+      "rows_digest": "a1a0e82481645b15"
+    },
+    "reboundsOffensive|offensiveReboundPercentage|2016": {
+      "n": 6004,
+      "rows_digest": "1fd4296a3718667e"
+    },
+    "reboundsTotal|reboundPercentage|2015": {
+      "n": 16570,
+      "rows_digest": "421314e5d66eda29"
+    },
+    "reboundsTotal|reboundPercentage|2016": {
+      "n": 16675,
+      "rows_digest": "2332161235d6a303"
+    },
+    "turnovers|percentTeamTurnovers|2025": {
+      "n": 1,
+      "rows_digest": "a0e37e73b91960f9"
+    }
+  },
+  "unexpected": {},
+  "count_changed": {},
+  "rows_changed": {},
+  "disappeared": [],
+  "injected": false,
+  "pass": true
+}

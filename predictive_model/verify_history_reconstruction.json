@@ -1,0 +1,43 @@
+{
+  "rest_days_mismatches": 0,
+  "rest_days_mismatches_positive": 0,
+  "false_openers": 0,
+  "unflagged_openers": 0,
+  "team_gap_input_missing": false,
+  "team_gap_deferred": false,
+  "team_gap_rows_missing": 0,
+  "team_gap_rows_extra": 0,
+  "team_gap_rows_checked": 217453,
+  "team_gap_prev_date_mismatches": 0,
+  "team_gap_count_mismatches": 0,
+  "rest_gradient": [
+    {
+      "gap_days": 1,
+      "n": 34758,
+      "events": 300,
+      "rate": 0.008631106507854307
+    },
+    {
+      "gap_days": 2,
+      "n": 119868,
+      "events": 1408,
+      "rate": 0.011746254212967598
+    },
+    {
+      "gap_days": 3,
+      "n": 31647,
+      "events": 341,
+      "rate": 0.010775112964893988
+    },
+    {
+      "gap_days": 4,
+      "n": 9327,
+      "events": 111,
+      "rate": 0.011900932775812159
+    }
+  ],
+  "team_gap_required": true,
+  "pass": true,
+  "n_rows": 217562,
+  "n_events": 2373
+}

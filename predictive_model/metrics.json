@@ -1,0 +1,611 @@
+{
+  "split": {
+    "train_rows": 142572,
+    "val_rows": 24845,
+    "test_rows": 50036,
+    "train_pos": 1230,
+    "val_pos": 369,
+    "test_pos": 774,
+    "test_prevalence": 0.015468862419058278
+  },
+  "models": {
+    "LogisticRegression": {
+      "roc_auc": 0.67733970458227,
+      "roc_ci": [
+        0.6532296082032196,
+        0.6996704356432699
+      ],
+      "pr_auc": 0.033913760761841195,
+      "pr_ci": [
+        0.02780822044719018,
+        0.040431405393816386
+      ],
+      "pr_lift": 2.1923888029450724,
+      "brier_raw": 0.31893421505642006,
+      "n_features": 105,
+      "brier_cal": 0.0151752411457824,
+      "roc_auc_cal": 0.6743222470118905,
+      "pr_auc_cal": 0.030636435884350707,
+      "pr_lift_cal": 1.9805228758519018,
+      "n_distinct_raw": 50036,
+      "n_distinct_cal": 92
+    },
+    "RandomForest": {
+      "roc_auc": 0.6656593700277071,
+      "roc_ci": [
+        0.6440541054670109,
+        0.6862075833515475
+      ],
+      "pr_auc": 0.03112085255131448,
+      "pr_ci": [
+        0.026955003946323823,
+        0.03659534190294204
+      ],
+      "pr_lift": 2.0118384732009966,
+      "brier_raw": 0.12997038564405003,
+      "n_features": 105,
+      "brier_cal": 0.01514022348089604,
+      "roc_auc_cal": 0.6646856175968667,
+      "pr_auc_cal": 0.02859456714704145,
+      "pr_lift_cal": 1.848524240012101,
+      "n_distinct_raw": 50036,
+      "n_distinct_cal": 50
+    },
+    "XGBoost": {
+      "roc_auc": 0.6411656987366082,
+      "roc_ci": [
+        0.6172457273741891,
+        0.6635747334761574
+      ],
+      "pr_auc": 0.027748808284475804,
+      "pr_ci": [
+        0.023905869673556842,
+        0.032249831637185415
+      ],
+      "pr_lift": 1.793849316953529,
+      "brier_raw": 0.16030579805374146,
+      "n_features": 105,
+      "brier_cal": 0.015195820051911968,
+      "roc_auc_cal": 0.6361155906660342,
+      "pr_auc_cal": 0.025452927501986078,
+      "pr_lift_cal": 1.645429819753715,
+      "n_distinct_raw": 49974,
+      "n_distinct_cal": 42
+    },
+    "Parsimonious": {
+      "roc_auc": 0.600165195389898,
+      "roc_ci": [
+        0.5749221141525483,
+        0.6234018062167006
+      ],
+      "pr_auc": 0.02200304007575572,
+      "pr_ci": [
+        0.019246982673585867,
+        0.025728083662317307
+      ],
+      "pr_lift": 1.4224084150265028,
+      "brier_raw": 0.1838988959789276,
+      "n_features": 17,
+      "brier_cal": 0.01522974069817836,
+      "roc_auc_cal": 0.598261541908964,
+      "pr_auc_cal": 0.021131001496367978,
+      "pr_lift_cal": 1.3660346135300623,
+      "n_distinct_raw": 49786,
+      "n_distinct_cal": 98
+    }
+  },
+  "ablations": {
+    "full": {
+      "roc_auc": 0.6411656987366082,
+      "roc_ci": [
+        0.618539279805008,
+        0.6630231155029479
+      ],
+      "pr_auc": 0.027748808284475804,
+      "pr_ci": [
+        0.023687840127071636,
+        0.03215156781572158
+      ],
+      "pr_lift": 1.793849316953529,
+      "n_features": 105
+    },
+    "no_history": {
+      "roc_auc": 0.6014553622842667,
+      "roc_ci": [
+        0.571878283899399,
+        0.6253687718909834
+      ],
+      "pr_auc": 0.024790889811726374,
+      "pr_ci": [
+        0.020985962738327354,
+        0.02958156785081545
+      ],
+      "pr_lift": 1.6026317346505696,
+      "n_features": 101
+    },
+    "history_only": {
+      "roc_auc": 0.5772886880117983,
+      "roc_ci": [
+        0.5527137342954558,
+        0.6034678470149637
+      ],
+      "pr_auc": 0.020850806294987544,
+      "pr_ci": [
+        0.018021228654789345,
+        0.024465340478538367
+      ],
+      "pr_lift": 1.34792111598966,
+      "n_features": 12
+    },
+    "workload_only": {
+      "roc_auc": 0.6103575990928429,
+      "roc_ci": [
+        0.5856371860519103,
+        0.6340966743541203
+      ],
+      "pr_auc": 0.023844667456766076,
+      "pr_ci": [
+        0.020739079381478526,
+        0.027624363293478293
+      ],
+      "pr_lift": 1.5414622491818442,
+      "n_features": 92
+    },
+    "schedule_only": {
+      "roc_auc": 0.600165195389898,
+      "roc_ci": [
+        0.5758612960898967,
+        0.6237568583980787
+      ],
+      "pr_auc": 0.02200304007575572,
+      "pr_ci": [
+        0.018975350710598422,
+        0.025714783414548643
+      ],
+      "pr_lift": 1.4224084150265028,
+      "n_features": 17
+    }
+  },
+  "alert_budget": {
+    "LogisticRegression": [
+      {
+        "budget": 0.01,
+        "n_flagged": 500,
+        "tp": 39,
+        "precision": 0.078,
+        "recall": 0.050387596899224806,
+        "lift": 5.042387596899225,
+        "nns": 12.820512820512821
+      },
+      {
+        "budget": 0.02,
+        "n_flagged": 1001,
+        "tp": 58,
+        "precision": 0.057942057942057944,
+        "recall": 0.07493540051679587,
+        "lift": 3.745721978280118,
+        "nns": 17.25862068965517
+      },
+      {
+        "budget": 0.05,
+        "n_flagged": 2502,
+        "tp": 114,
+        "precision": 0.045563549160671464,
+        "recall": 0.14728682170542637,
+        "lift": 2.9455009635702294,
+        "nns": 21.94736842105263
+      },
+      {
+        "budget": 0.1,
+        "n_flagged": 5004,
+        "tp": 201,
+        "precision": 0.04016786570743405,
+        "recall": 0.2596899224806202,
+        "lift": 2.5966916389369126,
+        "nns": 24.895522388059703
+      },
+      {
+        "budget": 0.2,
+        "n_flagged": 10007,
+        "tp": 328,
+        "precision": 0.03277705606075747,
+        "recall": 0.42377260981912146,
+        "lift": 2.1189053967132567,
+        "nns": 30.509146341463413
+      }
+    ]
+  },
+  "per_season": {
+    "2022": {
+      "rows": 24894,
+      "pos": 318,
+      "prev": 0.01277416244878284,
+      "roc_auc": 0.6940786173758517,
+      "pr_auc": 0.03211946031233628
+    },
+    "2023": {
+      "rows": 25142,
+      "pos": 456,
+      "prev": 0.018136981942566223,
+      "roc_auc": 0.6628886889507655,
+      "pr_auc": 0.03635576555405515
+    }
+  },
+  "val_selection": {
+    "scores": {
+      "LogisticRegression": 0.030829461686854506,
+      "RandomForest": 0.027511667149610612,
+      "XGBoost": 0.025790849218648992,
+      "Parsimonious": 0.021959457729725622
+    },
+    "selected": "LogisticRegression",
+    "val_prevalence": 0.014852082914067217
+  },
+  "parsimonious_features": [
+    "rest_days",
+    "b2b",
+    "season_opener",
+    "games_last_7d",
+    "games_last_14d",
+    "panel_games",
+    "season_games",
+    "season_minutes",
+    "started_last_game",
+    "AGE",
+    "BMI",
+    "AGE_missing",
+    "BMI_missing",
+    "pos_C",
+    "pos_F",
+    "pos_G",
+    "pos_Unstarted"
+  ],
+  "seed_stability": {
+    "LogisticRegression": {
+      "roc_median": 0.67733970458227,
+      "roc_min": 0.67733970458227,
+      "roc_max": 0.67733970458227,
+      "pr_median": 0.033913760761841195,
+      "pr_min": 0.033913760761841195,
+      "pr_max": 0.033913760761841195,
+      "lift_median": 2.1923888029450724
+    },
+    "RandomForest": {
+      "roc_median": 0.6661441218640362,
+      "roc_min": 0.665608358702616,
+      "roc_max": 0.6671994924150225,
+      "pr_median": 0.03112085255131448,
+      "pr_min": 0.030623390143073623,
+      "pr_max": 0.03179928304344512,
+      "lift_median": 2.0118384732009966
+    },
+    "XGBoost": {
+      "roc_median": 0.6411656987366082,
+      "roc_min": 0.6338504649033165,
+      "roc_max": 0.6428647036984233,
+      "pr_median": 0.027949391676041678,
+      "pr_min": 0.027468930788310156,
+      "pr_max": 0.02853372497693319,
+      "lift_median": 1.8068162298480896
+    },
+    "Parsimonious": {
+      "roc_median": 0.6020793002914229,
+      "roc_min": 0.5962848989587605,
+      "roc_max": 0.6077321812589481,
+      "pr_median": 0.02200304007575572,
+      "pr_min": 0.021546617821217837,
+      "pr_max": 0.0228466354552698,
+      "lift_median": 1.4224084150265028
+    }
+  },
+  "budget_score_basis": {
+    "model": "LogisticRegression",
+    "budget": 0.05,
+    "k": 2502,
+    "score_used": "raw",
+    "tp_raw": 114,
+    "lift_raw": 2.9455009635702294,
+    "cal_threshold": 0.04781704781704782,
+    "cal_rows_strictly_above": 373,
+    "cal_rows_tied_at_threshold": 2771,
+    "tp_cal_stable_order_tiebreak": 106,
+    "lift_cal_stable_order_tiebreak": 2.738799141565301,
+    "tp_cal_expected_random_tiebreak": 112.4413569108625,
+    "lift_cal_expected_random_tiebreak": 2.905229167772715,
+    "tiebreak_note": "stable-order follows the prediction file's (personId, dt) sort, not chronology and not chance; the expected-random figures are the defensible ones"
+  },
+  "tissue": {
+    "Ligament/Joint": {
+      "roc_auc": 0.5735607400047246,
+      "roc_ci": [
+        0.5386832835163833,
+        0.6122540496943402
+      ],
+      "pr_auc": 0.006963001288441498,
+      "pr_ci": [
+        0.00563684197094171,
+        0.00900143655092628
+      ],
+      "pr_lift": 1.3196997441987075,
+      "prevalence": 0.005276201135182668,
+      "n_events_test": 264
+    },
+    "Muscle/Tendon": {
+      "roc_auc": 0.6321123342709054,
+      "roc_ci": [
+        0.6008817030523035,
+        0.6656391455036679
+      ],
+      "pr_auc": 0.012950711852993048,
+      "pr_ci": [
+        0.010396804201765447,
+        0.016874450429038623
+      ],
+      "pr_lift": 1.7561024885538217,
+      "prevalence": 0.007374690223039411,
+      "n_events_test": 369
+    },
+    "Bone/Contusion": {
+      "roc_auc": 0.6176236053158441,
+      "roc_ci": [
+        0.5745288618531932,
+        0.6643657420077046
+      ],
+      "pr_auc": 0.004424160549602773,
+      "pr_ci": [
+        0.003409109741364311,
+        0.00644517144128206
+      ],
+      "pr_lift": 1.5699808316306691,
+      "prevalence": 0.002817971060836198,
+      "n_events_test": 141
+    }
+  },
+  "strata": {
+    "concussion": {
+      "gate": {
+        "min_test_events": 25,
+        "prespecified": true,
+        "passed": true
+      },
+      "per_season": {
+        "2015": {
+          "rows": 23440,
+          "events": 8,
+          "rate": 0.00034129692832764505
+        },
+        "2016": {
+          "rows": 25349,
+          "events": 8,
+          "rate": 0.0003155943035228214
+        },
+        "2017": {
+          "rows": 25156,
+          "events": 14,
+          "rate": 0.000556527269836222
+        },
+        "2018": {
+          "rows": 25213,
+          "events": 11,
+          "rate": 0.00043628286994804266
+        },
+        "2019": {
+          "rows": 21438,
+          "events": 13,
+          "rate": 0.0006063998507323445
+        },
+        "2020": {
+          "rows": 22044,
+          "events": 14,
+          "rate": 0.000635093449464707
+        },
+        "2021": {
+          "rows": 24860,
+          "events": 15,
+          "rate": 0.0006033789219629927
+        },
+        "2022": {
+          "rows": 24901,
+          "events": 7,
+          "rate": 0.0002811132083048874
+        },
+        "2023": {
+          "rows": 25161,
+          "events": 19,
+          "rate": 0.0007551369182464926
+        }
+      },
+      "splits": {
+        "train": {
+          "rows": 142640,
+          "events": 68,
+          "prevalence": 0.00047672462142456533
+        },
+        "val": {
+          "rows": 24860,
+          "events": 15,
+          "prevalence": 0.0006033789219629927
+        },
+        "test": {
+          "rows": 50062,
+          "events": 26,
+          "prevalence": 0.0005193559985617834
+        }
+      },
+      "n_events_total": 109,
+      "prevalence_overall": 0.0005010066096101341,
+      "rest_gradient": {
+        "1 (back-to-back)": {
+          "n": 34758,
+          "pos": 14,
+          "rate": 0.0004027849703665343
+        },
+        "2": {
+          "n": 119868,
+          "pos": 55,
+          "rate": 0.0004588380551940468
+        },
+        "3": {
+          "n": 31647,
+          "pos": 22,
+          "rate": 0.0006951685783802572
+        },
+        "4": {
+          "n": 9327,
+          "pos": 5,
+          "rate": 0.0005360780529645116
+        },
+        "5-6": {
+          "n": 6169,
+          "pos": 7,
+          "rate": 0.0011347057869995137
+        },
+        "7-13": {
+          "n": 8581,
+          "pos": 3,
+          "rate": 0.00034960960261041835
+        },
+        "14+": {
+          "n": 3837,
+          "pos": 0,
+          "rate": 0.0
+        },
+        "season_opener": {
+          "n": 3375,
+          "pos": 3,
+          "rate": 0.0008888888888888889
+        }
+      },
+      "n_events_test": 26,
+      "prevalence_test": 0.0005193559985617834,
+      "model": {
+        "roc_auc": 0.5467040653806183,
+        "roc_ci": [
+          0.4368433589559434,
+          0.6429772106778643
+        ],
+        "pr_auc": 0.0005805851723596698,
+        "pr_ci": [
+          0.00034670743263365473,
+          0.0009722325213714836
+        ],
+        "pr_lift": 1.1178944191796074,
+        "n_events_test": 26,
+        "n_events_train": 68,
+        "prevalence": 0.0005193559985617834,
+        "scale_pos_weight": 2096.6470588235293,
+        "roc_seed_median": 0.5599929589157345,
+        "roc_seed_min": 0.5467040653806183,
+        "roc_seed_max": 0.5891473523678336
+      }
+    }
+  },
+  "best_model": "LogisticRegression",
+  "feature_cols": [
+    "rest_days",
+    "b2b",
+    "season_opener",
+    "games_last_7d",
+    "games_last_14d",
+    "panel_games",
+    "season_games",
+    "season_minutes",
+    "started_last_game",
+    "prior_injuries",
+    "days_since_injury",
+    "ever_injured",
+    "injuries_last_365d",
+    "AGE",
+    "BMI",
+    "AGE_missing",
+    "BMI_missing",
+    "numMinutes_r3",
+    "numMinutes_r5",
+    "numMinutes_r10",
+    "numMinutes_sd5",
+    "numMinutes_std",
+    "fieldGoalsAttempted_r3",
+    "fieldGoalsAttempted_r5",
+    "fieldGoalsAttempted_r10",
+    "fieldGoalsAttempted_sd5",
+    "fieldGoalsAttempted_std",
+    "reboundsTotal_r3",
+    "reboundsTotal_r5",
+    "reboundsTotal_r10",
+    "reboundsTotal_sd5",
+    "reboundsTotal_std",
+    "points_r3",
+    "points_r5",
+    "points_r10",
+    "points_sd5",
+    "points_std",
+    "assists_r3",
+    "assists_r5",
+    "assists_r10",
+    "assists_sd5",
+    "assists_std",
+    "turnovers_r3",
+    "turnovers_r5",
+    "turnovers_r10",
+    "turnovers_sd5",
+    "turnovers_std",
+    "foulsPersonal_r3",
+    "foulsPersonal_r5",
+    "foulsPersonal_r10",
+    "foulsPersonal_sd5",
+    "foulsPersonal_std",
+    "possessions_r3",
+    "possessions_r5",
+    "possessions_r10",
+    "possessions_sd5",
+    "possessions_std",
+    "usagePercentage_r3",
+    "usagePercentage_r5",
+    "usagePercentage_r10",
+    "usagePercentage_sd5",
+    "usagePercentage_std",
+    "playerImpactEstimate_r3",
+    "playerImpactEstimate_r5",
+    "playerImpactEstimate_r10",
+    "playerImpactEstimate_sd5",
+    "playerImpactEstimate_std",
+    "pace_r3",
+    "pace_r5",
+    "pace_r10",
+    "pace_sd5",
+    "pace_std",
+    "threePointersAttempted_r3",
+    "threePointersAttempted_r5",
+    "threePointersAttempted_r10",
+    "threePointersAttempted_sd5",
+    "threePointersAttempted_std",
+    "freeThrowsAttempted_r3",
+    "freeThrowsAttempted_r5",
+    "freeThrowsAttempted_r10",
+    "freeThrowsAttempted_sd5",
+    "freeThrowsAttempted_std",
+    "plusMinusPoints_r3",
+    "plusMinusPoints_r5",
+    "plusMinusPoints_r10",
+    "plusMinusPoints_sd5",
+    "plusMinusPoints_std",
+    "numMinutes_acr",
+    "fieldGoalsAttempted_acr",
+    "reboundsTotal_acr",
+    "points_acr",
+    "assists_acr",
+    "turnovers_acr",
+    "foulsPersonal_acr",
+    "possessions_acr",
+    "usagePercentage_acr",
+    "playerImpactEstimate_acr",
+    "pace_acr",
+    "threePointersAttempted_acr",
+    "freeThrowsAttempted_acr",
+    "plusMinusPoints_acr",
+    "pos_C",
+    "pos_F",
+    "pos_G",
+    "pos_Unstarted"
+  ]
+}

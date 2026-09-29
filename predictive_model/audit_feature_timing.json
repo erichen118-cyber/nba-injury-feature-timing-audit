@@ -1,0 +1,306 @@
+{
+  "config": {
+    "A_cutoff_seasons": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "A_midseason_cutoff_seasons": [
+      2020,
+      2022
+    ],
+    "B_passes": 5,
+    "B_seed": 42,
+    "C_cutoff_seasons": [
+      2020,
+      2022
+    ],
+    "C_midseason_cutoff_seasons": [
+      2019,
+      2021,
+      2023
+    ],
+    "C_seed": 202609,
+    "D_passes": 2,
+    "D_seed": 990918,
+    "D_exempt": [
+      "days_since_injury",
+      "ever_injured",
+      "injuries_last_365d",
+      "prior_injuries"
+    ],
+    "inject_A_cutoff_seasons": [
+      2021,
+      2023
+    ],
+    "inject_B_passes": 2,
+    "inject_C_midseason_seasons": [
+      2022
+    ],
+    "inject_D_passes": 1,
+    "inject_expect": {
+      "leak_same_game_minutes": "B",
+      "leak_career_mean_minutes": "A",
+      "leak_future_injury": "A",
+      "leak_prior_label_rest": "D"
+    },
+    "inject_expect_only": [
+      "leak_prior_label_rest"
+    ],
+    "not_perturbed": [
+      "dt",
+      "personId",
+      "season",
+      "AGE",
+      "BMI"
+    ],
+    "known_failures": []
+  },
+  "n_feature_columns": 107,
+  "n_pass_both": 105,
+  "fail_test_A": [],
+  "fail_test_B": [
+    "fieldGoalsAttempted_c1",
+    "fieldGoalsAttempted_c5"
+  ],
+  "fail_test_C": [],
+  "fail_test_D": [],
+  "new_failures": [],
+  "test_A_detail": [
+    {
+      "cutoff_label": "season 2019 opener",
+      "cutoff": "2019-10-22",
+      "panel_rows": 103590,
+      "rows_compared": 99158,
+      "rows_missing_from_rebuild": 0,
+      "rows_extra_in_rebuild": 0
+    },
+    {
+      "cutoff_label": "season 2020 opener",
+      "cutoff": "2020-12-22",
+      "panel_rows": 125805,
+      "rows_compared": 120596,
+      "rows_missing_from_rebuild": 0,
+      "rows_extra_in_rebuild": 0
+    },
+    {
+      "cutoff_label": "season 2020 mid-season",
+      "cutoff": "2021-03-11",
+      "panel_rows": 137213,
+      "rows_compared": 131493,
+      "rows_missing_from_rebuild": 0,
+      "rows_extra_in_rebuild": 0
+    },
+    {
+      "cutoff_label": "season 2021 opener",
+      "cutoff": "2021-10-19",
+      "panel_rows": 148646,
+      "rows_compared": 142640,
+      "rows_missing_from_rebuild": 0,
+      "rows_extra_in_rebuild": 0
+    },
+    {
+      "cutoff_label": "season 2022 opener",
+      "cutoff": "2022-10-18",
+      "panel_rows": 174472,
+      "rows_compared": 167500,
+      "rows_missing_from_rebuild": 0,
+      "rows_extra_in_rebuild": 0
+    },
+    {
+      "cutoff_label": "season 2022 mid-season",
+      "cutoff": "2023-01-09",
+      "panel_rows": 187298,
+      "rows_compared": 179826,
+      "rows_missing_from_rebuild": 0,
+      "rows_extra_in_rebuild": 0
+    },
+    {
+      "cutoff_label": "season 2023 opener",
+      "cutoff": "2023-10-24",
+      "panel_rows": 200159,
+      "rows_compared": 192401,
+      "rows_missing_from_rebuild": 0,
+      "rows_extra_in_rebuild": 0
+    }
+  ],
+  "test_B_detail": [
+    {
+      "pass": 0,
+      "seed": 42,
+      "rows_perturbed": 1212,
+      "cells_effectively_changed": 0.999453
+    },
+    {
+      "pass": 1,
+      "seed": 43,
+      "rows_perturbed": 1212,
+      "cells_effectively_changed": 0.999225
+    },
+    {
+      "pass": 2,
+      "seed": 44,
+      "rows_perturbed": 1208,
+      "cells_effectively_changed": 0.999498
+    },
+    {
+      "pass": 3,
+      "seed": 45,
+      "rows_perturbed": 1204,
+      "cells_effectively_changed": 0.999179
+    },
+    {
+      "pass": 4,
+      "seed": 46,
+      "rows_perturbed": 1206,
+      "cells_effectively_changed": 0.999179
+    }
+  ],
+  "test_C_detail": [
+    {
+      "cutoff_label": "season 2019 mid-season",
+      "cutoff": "2020-01-04",
+      "future_rows_perturbed": 111597,
+      "records_blanked": 36582,
+      "records_invented": 5587,
+      "rows_compared": 109737
+    },
+    {
+      "cutoff_label": "season 2020 opener",
+      "cutoff": "2020-12-22",
+      "future_rows_perturbed": 100449,
+      "records_blanked": 33031,
+      "records_invented": 5016,
+      "rows_compared": 120596
+    },
+    {
+      "cutoff_label": "season 2021 mid-season",
+      "cutoff": "2022-01-11",
+      "future_rows_perturbed": 64759,
+      "records_blanked": 21280,
+      "records_invented": 3290,
+      "rows_compared": 154842
+    },
+    {
+      "cutoff_label": "season 2022 opener",
+      "cutoff": "2022-10-18",
+      "future_rows_perturbed": 51782,
+      "records_blanked": 17135,
+      "records_invented": 2486,
+      "rows_compared": 167500
+    },
+    {
+      "cutoff_label": "season 2023 mid-season",
+      "cutoff": "2024-01-18",
+      "future_rows_perturbed": 13069,
+      "records_blanked": 4431,
+      "records_invented": 634,
+      "rows_compared": 204902
+    }
+  ],
+  "test_D_detail": [
+    {
+      "pass": 0,
+      "seed": 990918,
+      "records_blanked": 67689,
+      "records_invented": 4573,
+      "rows_compared": 214457
+    },
+    {
+      "pass": 1,
+      "seed": 990919,
+      "records_blanked": 67739,
+      "records_invented": 4433,
+      "rows_compared": 214447
+    }
+  ],
+  "positive_control": {
+    "leak_same_game_minutes": {
+      "expected_test": "B",
+      "also_expected_by_C": false,
+      "expected_by_this_test_only": false,
+      "a_and_b_quiet": true,
+      "caught_by_A": false,
+      "caught_by_B": true,
+      "caught_by_C": false,
+      "caught_by_D": false,
+      "rows_differing_A": 0,
+      "rows_differing_B": 2424,
+      "rows_differing_C": 0,
+      "rows_differing_D": 0,
+      "detected": true
+    },
+    "leak_career_mean_minutes": {
+      "expected_test": "A",
+      "also_expected_by_C": false,
+      "expected_by_this_test_only": false,
+      "a_and_b_quiet": true,
+      "caught_by_A": true,
+      "caught_by_B": true,
+      "caught_by_C": false,
+      "caught_by_D": false,
+      "rows_differing_A": 210810,
+      "rows_differing_B": 2424,
+      "rows_differing_C": 0,
+      "rows_differing_D": 0,
+      "detected": true
+    },
+    "leak_future_injury": {
+      "expected_test": "A",
+      "also_expected_by_C": true,
+      "expected_by_this_test_only": false,
+      "a_and_b_quiet": true,
+      "caught_by_A": true,
+      "caught_by_B": false,
+      "caught_by_C": true,
+      "caught_by_D": true,
+      "rows_differing_A": 925,
+      "rows_differing_B": 0,
+      "rows_differing_C": 37,
+      "rows_differing_D": 5783,
+      "detected": true
+    },
+    "leak_prior_label_rest": {
+      "expected_test": "D",
+      "also_expected_by_C": false,
+      "expected_by_this_test_only": true,
+      "a_and_b_quiet": true,
+      "caught_by_A": false,
+      "caught_by_B": false,
+      "caught_by_C": false,
+      "caught_by_D": true,
+      "rows_differing_A": 0,
+      "rows_differing_B": 0,
+      "rows_differing_C": 0,
+      "rows_differing_D": 6357,
+      "detected": true
+    }
+  },
+  "positive_control_escaped": [],
+  "concurrent_control": {
+    "fieldGoalsAttempted_c5": {
+      "caught": {
+        "A": false,
+        "B": true,
+        "C": false,
+        "D": false
+      },
+      "must_fail_test": "B",
+      "passed": true
+    },
+    "fieldGoalsAttempted_c1": {
+      "caught": {
+        "A": false,
+        "B": true,
+        "C": false,
+        "D": false
+      },
+      "must_fail_test": "B",
+      "passed": true
+    }
+  },
+  "concurrent_control_escaped": [],
+  "runtime_seconds": 1215.4
+}

@@ -1,0 +1,277 @@
+{
+  "generated": "2026-09-28T12:20:21",
+  "design": {
+    "purpose": "separate feature timing from split design in the 0.7891 -> corrected-headline comparison",
+    "estimator": "LogisticRegression",
+    "seed": 42,
+    "random_split_kwargs": {
+      "test_size": 0.25,
+      "random_state": 42
+    },
+    "same_game_columns": [
+      "numMinutes",
+      "points",
+      "assists",
+      "reboundsTotal",
+      "reboundsOffensive",
+      "reboundsDefensive",
+      "fieldGoalsMade",
+      "fieldGoalsAttempted",
+      "threePointersMade",
+      "threePointersAttempted",
+      "freeThrowsMade",
+      "freeThrowsAttempted",
+      "steals",
+      "blocks",
+      "blocksAgainst",
+      "turnovers",
+      "foulsPersonal",
+      "foulsAgainst",
+      "plusMinusPoints",
+      "possessions",
+      "fieldGoalsPercentage",
+      "threePointersPercentage",
+      "freeThrowsPercentage",
+      "effectiveFieldGoalPercentage",
+      "trueShootingPercentage",
+      "usagePercentage",
+      "estimatedUsagePercentage",
+      "estimatedOffensiveRating",
+      "offensiveRating",
+      "spWorkOffensiveRating",
+      "estimatedDefensiveRating",
+      "defensiveRating",
+      "spWorkDefensiveRating",
+      "estimatedNetRating",
+      "netRating",
+      "spWorkNetRating",
+      "assistPercentage",
+      "assistToTurnoverRatio",
+      "assistRatio",
+      "offensiveReboundPercentage",
+      "defensiveReboundPercentage",
+      "reboundPercentage",
+      "teamTurnoverPercentage",
+      "estimatedTurnoverPercentage",
+      "estimatedPace",
+      "pace",
+      "pacePer40",
+      "spWorkPace",
+      "playerImpactEstimate",
+      "pointsOffTurnovers",
+      "pointsSecondChance",
+      "pointsFastBreak",
+      "pointsInPaint",
+      "opponentPointsOffTurnovers",
+      "opponentPointsSecondChance",
+      "opponentPointsFastBreak",
+      "opponentPointsInPaint",
+      "percentFieldGoalAttempts2Point",
+      "percentFieldGoalAttempts3Point",
+      "percentPoints2Point",
+      "percentPoints2PointMidRange",
+      "percentPoints3Point",
+      "percentPointsFastBreak",
+      "percentPointsFreeThrow",
+      "percentPointsOffTurnovers",
+      "percentPointsInPaint",
+      "percentAssisted2PointMade",
+      "percentUnassisted2PointMade",
+      "percentAssisted3PointMade",
+      "percentUnassisted3PointMade",
+      "percentAssistedFieldGoalsMade",
+      "percentUnassistedFieldGoalsMade",
+      "percentTeamFieldGoalsMade",
+      "percentTeamFieldGoalsAttempted",
+      "percentTeamThreePointersMade",
+      "percentTeamThreePointersAttempted",
+      "percentTeamFreeThrowsMade",
+      "percentTeamFreeThrowsAttempted",
+      "percentTeamOffensiveRebounds",
+      "percentTeamDefensiveRebounds",
+      "percentTeamRebounds",
+      "percentTeamAssists",
+      "percentTeamTurnovers",
+      "percentTeamSteals",
+      "percentTeamBlocks",
+      "percentTeamBlocksAgainst",
+      "percentTeamFoulsPersonal",
+      "percentTeamFoulsDrawn",
+      "percentTeamPoints"
+    ],
+    "same_game_columns_dropped_all_missing": [],
+    "n_rows_analytic": 217453,
+    "n_events_analytic": 2373,
+    "n_athletes": 1218,
+    "random_split_arms_are": "historical stress test, NOT a validation of the superseded model"
+  },
+  "cells": {
+    "temporal__corrected": {
+      "roc_auc": 0.67733970458227,
+      "roc_ci": [
+        0.6532296082032196,
+        0.6996704356432699
+      ],
+      "pr_auc": 0.033913760761841195,
+      "pr_ci": [
+        0.02780822044719018,
+        0.040431405393816386
+      ],
+      "pr_lift": 2.1923888029450724,
+      "n_features": 105,
+      "n_train": 142572,
+      "n_test": 50036,
+      "n_test_events": 774,
+      "test_prevalence": 0.015468862419058278,
+      "design": "temporal",
+      "arm": "corrected",
+      "n_rows_analytic": 192608
+    },
+    "temporal__corrected_plus_same_game": {
+      "roc_auc": 0.7181744145657082,
+      "roc_ci": [
+        0.6963096030410344,
+        0.7376792291549619
+      ],
+      "pr_auc": 0.054887029066999535,
+      "pr_ci": [
+        0.04747423762241927,
+        0.06692155966636103
+      ],
+      "pr_lift": 3.548226597411355,
+      "n_features": 194,
+      "n_train": 142572,
+      "n_test": 50036,
+      "n_test_events": 774,
+      "test_prevalence": 0.015468862419058278,
+      "design": "temporal",
+      "arm": "corrected_plus_same_game",
+      "n_rows_analytic": 192608
+    },
+    "random_stratified__corrected": {
+      "roc_auc": 0.6882379504389405,
+      "roc_ci": [
+        0.6625124282524937,
+        0.7135223619878289
+      ],
+      "pr_auc": 0.027347998099922215,
+      "pr_ci": [
+        0.02204731519944328,
+        0.03373353077774093
+      ],
+      "pr_lift": 2.5071611613898335,
+      "n_features": 105,
+      "n_train": 163089,
+      "n_test": 54364,
+      "n_test_events": 593,
+      "test_prevalence": 0.010907953792951218,
+      "design": "random_stratified",
+      "arm": "corrected",
+      "n_rows_analytic": 217453
+    },
+    "random_stratified__corrected_plus_same_game": {
+      "roc_auc": 0.7259326235864458,
+      "roc_ci": [
+        0.702195144531846,
+        0.7483451937640527
+      ],
+      "pr_auc": 0.05339162962380618,
+      "pr_ci": [
+        0.04239974382991101,
+        0.07251898461442256
+      ],
+      "pr_lift": 4.894742922206744,
+      "n_features": 194,
+      "n_train": 163089,
+      "n_test": 54364,
+      "n_test_events": 593,
+      "test_prevalence": 0.010907953792951218,
+      "design": "random_stratified",
+      "arm": "corrected_plus_same_game",
+      "n_rows_analytic": 217453
+    }
+  },
+  "paired_delta_same_game": {
+    "temporal": {
+      "point": 0.04083470998343819,
+      "ci": [
+        0.025094346991429404,
+        0.05738526255116266
+      ],
+      "n_boot": 1000,
+      "n_clusters": 633
+    },
+    "random_stratified": {
+      "point": 0.0376946731475053,
+      "ci": [
+        0.020027726548274973,
+        0.05477350954247014
+      ],
+      "n_boot": 1000,
+      "n_clusters": 1164
+    }
+  },
+  "split_design_effect_corrected_features": {
+    "difference": 0.010898245856670541,
+    "paired": false,
+    "why_not_paired": "the two cells are scored on different test folds (different athletes, different seasons), so there is no shared resampling unit and no paired interval exists; read it against the two cells' own overlapping intervals",
+    "temporal_roc_ci": [
+      0.6532296082032196,
+      0.6996704356432699
+    ],
+    "random_stratified_roc_ci": [
+      0.6625124282524937,
+      0.7135223619878289
+    ],
+    "also_confounded_by_training_fold": "checklist item 8: the temporal arm trains on 142,572 rows (2015-16..2020-21, excluding the reserved 2021-22 validation season) and the random arm on 163,089 drawn from the whole cohort, so this difference bundles training-set size and composition with split design. More training data would be expected to raise the random arm's score, which is the SAME direction as the observed difference, so the confound could produce it; no clean estimate of split design alone is available from these cells",
+    "train_rows_temporal": 142572,
+    "train_rows_random": 163089
+  },
+  "historical_leaked_roc_auc": 0.7891,
+  "unexplained_gap_vs_cell4": 0.06316737641355419,
+  "unmeasured_axes": [
+    "estimator (historical: RandomForest 300x12; here: LogisticRegression)",
+    "cohort and data version (historical: unfiltered master rows)",
+    "outcome definition (historical: Is_Injured)",
+    "playing-history construction (the label-filtered history defect; deliberately not reconstructed)"
+  ],
+  "headline_anchor": {
+    "model": "LogisticRegression",
+    "fields": {
+      "roc_auc": {
+        "metrics_json": 0.67733970458227,
+        "cell1": 0.67733970458227,
+        "drift": 0.0
+      },
+      "pr_auc": {
+        "metrics_json": 0.033913760761841195,
+        "cell1": 0.033913760761841195,
+        "drift": 0.0
+      },
+      "roc_ci": {
+        "metrics_json": [
+          0.6532296082032196,
+          0.6996704356432699
+        ],
+        "cell1": [
+          0.6532296082032196,
+          0.6996704356432699
+        ],
+        "drift": 0.0
+      },
+      "pr_ci": {
+        "metrics_json": [
+          0.02780822044719018,
+          0.040431405393816386
+        ],
+        "cell1": [
+          0.02780822044719018,
+          0.040431405393816386
+        ],
+        "drift": 0.0
+      }
+    },
+    "worst_drift": 0.0,
+    "tolerance": 1e-06
+  }
+}

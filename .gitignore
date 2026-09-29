@@ -1,0 +1,13 @@
+# Environment
+.venv/
+__pycache__/
+
+# Study data: never distributed (see DATA.md)
+*.csv
+*.csv.gz
+*.parquet
+human audit/
+
+# Per-run logs written beside each script
+*.txt
+*.log

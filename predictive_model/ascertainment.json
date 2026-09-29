@@ -1,0 +1,126 @@
+{
+  "generated": "2026-09-28 12:14:22",
+  "unit": {
+    "matched_game_rows_all_types": 4862,
+    "events_all_types": 3649,
+    "unknown_events_all_types": 1178,
+    "events_with_conflicting_category": 0,
+    "matched_game_rows_regular_season": 4786,
+    "events_regular_season": 3581
+  },
+  "events": {
+    "categorized_events": 3581,
+    "by_category": {
+      "2. Muscle / Tendon Injuries": 1220,
+      "Unknown / General Injury": 1153,
+      "1. Ligament / Joint Injuries": 783,
+      "3. Bone / Contusion Injuries": 399,
+      "4. Load Management / Non-Structural": 23,
+      "5. Exclusions": 3
+    },
+    "unknown_events": 1153,
+    "unknown_pct": 32.2
+  },
+  "drift": {
+    "by_season": {
+      "2015-16": {
+        "events": 160,
+        "unknown": 55,
+        "pct": 34.4
+      },
+      "2016-17": {
+        "events": 212,
+        "unknown": 36,
+        "pct": 17.0
+      },
+      "2017-18": {
+        "events": 312,
+        "unknown": 53,
+        "pct": 17.0
+      },
+      "2018-19": {
+        "events": 342,
+        "unknown": 103,
+        "pct": 30.1
+      },
+      "2019-20": {
+        "events": 378,
+        "unknown": 124,
+        "pct": 32.8
+      },
+      "2020-21": {
+        "events": 407,
+        "unknown": 165,
+        "pct": 40.5
+      },
+      "2021-22": {
+        "events": 576,
+        "unknown": 203,
+        "pct": 35.2
+      },
+      "2022-23": {
+        "events": 528,
+        "unknown": 210,
+        "pct": 39.8
+      },
+      "2023-24": {
+        "events": 666,
+        "unknown": 204,
+        "pct": 30.6
+      }
+    },
+    "by_block": {
+      "train": {
+        "events": 1811,
+        "unknown": 536,
+        "pct": 29.6
+      },
+      "validation": {
+        "events": 576,
+        "unknown": 203,
+        "pct": 35.2
+      },
+      "test": {
+        "events": 1194,
+        "unknown": 414,
+        "pct": 34.7
+      }
+    }
+  },
+  "descriptor_test": {
+    "audited_records": 200,
+    "audited_in_event_set": 120,
+    "event_set_size": 3581,
+    "descriptor_present": {
+      "records": 80,
+      "assigned_a_tissue": 76,
+      "matching_descriptor": 76,
+      "contradicting_descriptor": 0,
+      "left_unknown": 4
+    },
+    "descriptor_absent": {
+      "records": 120,
+      "left_unknown": 66,
+      "assigned_muscle_tendon": 54,
+      "pct_left_unknown": 55.0
+    },
+    "within_site_split_sites": [
+      "Ankle",
+      "Back",
+      "Elbow",
+      "Foot",
+      "Hamstring",
+      "Hip",
+      "Knee",
+      "Shoulder",
+      "Toe"
+    ]
+  },
+  "achilles_reclassification_bound": {
+    "test_season_events": 11,
+    "test_events": 774,
+    "max_roc_auc_shift": 0.0095,
+    "roc_ci_half_width": 0.0232
+  },
+  "achilles_unknown_events": 37
+}

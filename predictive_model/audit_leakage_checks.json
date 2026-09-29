@@ -1,0 +1,70 @@
+{
+  "run": "2026-09-28 05:05:04",
+  "seed": 42,
+  "n_covariates": 105,
+  "split": {
+    "train_rows": 142572,
+    "test_rows": 50036
+  },
+  "permutation": {
+    "n_pos_permuted": 541,
+    "n_neg_permuted": 49495,
+    "prevalence_permuted": 0.010812215205052362,
+    "null_se": 0.012478882970426059,
+    "pass_band_se": 2.32,
+    "pass_band": [
+      0.47104899150861157,
+      0.5289510084913884
+    ],
+    "models": {
+      "RandomForest": {
+        "roc_auc": 0.518166905337252,
+        "lift": 1.0410028861394698,
+        "n_se_from_chance": 1.4558118206818713,
+        "pass": true
+      },
+      "XGBoost": {
+        "roc_auc": 0.5014637113963789,
+        "lift": 1.0600990439695095,
+        "n_se_from_chance": 0.11729506557981076,
+        "pass": true
+      }
+    }
+  },
+  "position_sensitivity": {
+    "full": {
+      "n_cov_with": 105,
+      "n_cov_without": 101,
+      "roc_auc_with": 0.6656593700277071,
+      "lift_with": 2.0118384732009966,
+      "roc_auc_without": 0.6655044739423661,
+      "lift_without": 2.0064697069545465,
+      "delta_roc_auc": -0.0001548960853410275,
+      "delta_lift": -0.005368766246450107
+    },
+    "parsimonious": {
+      "n_cov_with": 17,
+      "n_cov_without": 13,
+      "roc_auc_with": 0.631553617702194,
+      "lift_with": 1.5553011927027542,
+      "roc_auc_without": 0.6271539761505139,
+      "lift_without": 1.565680344955077,
+      "delta_roc_auc": -0.004399641551680045,
+      "delta_lift": 0.010379152252322665
+    }
+  },
+  "mirror_check": {
+    "full": {
+      "source": "metrics.json models/RandomForest/roc_auc",
+      "published": 0.6656593700277071,
+      "recomputed": 0.6656593700277071,
+      "agrees": true
+    },
+    "parsimonious": {
+      "source": "sensitivity_analyses.json D_algorithm/RandomForest/schedule+bio",
+      "published": 0.631553617702194,
+      "recomputed": 0.631553617702194,
+      "agrees": true
+    }
+  }
+}

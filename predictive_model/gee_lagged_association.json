@@ -1,0 +1,581 @@
+{
+  "cohort": {
+    "n_rows": 217453,
+    "n_clusters": 4603,
+    "n_athletes": 1218
+  },
+  "arms": {
+    "lagged": {
+      "suffix": "_r5",
+      "definition": "five-game mean ending at game t-1 (games t-5..t-1); strictly pre-game"
+    },
+    "concurrent": {
+      "suffix": "_c5",
+      "definition": "five-game mean ending at game t (games t-4..t); INCLUDES the index game and is not pre-game"
+    }
+  },
+  "outcomes": {
+    "Ligament/Joint": {
+      "n_events": 769,
+      "arms": {
+        "lagged": {
+          "cov_struct": "Exchangeable",
+          "converged": true,
+          "n_iterations": 6,
+          "feature_definition": "five-game mean ending at game t-1 (games t-5..t-1); strictly pre-game",
+          "n_rows": 217453,
+          "n_clusters": 4603,
+          "n_events": 769,
+          "terms": {
+            "C(position)[T.F]": {
+              "or_per_sd": 0.98775412781596,
+              "ci": [
+                0.7570573213587565,
+                1.2887507847706554
+              ],
+              "p": 0.9276595527720569
+            },
+            "C(position)[T.G]": {
+              "or_per_sd": 0.708493474108685,
+              "ci": [
+                0.5411931428027751,
+                0.9275117571796773
+              ],
+              "p": 0.012158847656462494
+            },
+            "C(position)[T.Unstarted]": {
+              "or_per_sd": 0.9159481926086551,
+              "ci": [
+                0.6177134945435782,
+                1.3581718692465368
+              ],
+              "p": 0.6622469447932839
+            },
+            "fieldGoalsAttempted_r5": {
+              "or_per_sd": 1.3713013465349828,
+              "ci": [
+                1.2791119322202886,
+                1.470135127067834
+              ],
+              "p": 5.965138925666605e-19
+            },
+            "AGE": {
+              "or_per_sd": 0.9497251141965402,
+              "ci": [
+                0.8638580887028797,
+                1.0441272754532982
+              ],
+              "p": 0.2860340856713093
+            },
+            "BMI": {
+              "or_per_sd": 0.9502021182493129,
+              "ci": [
+                0.8788476840268096,
+                1.0273498831885624
+              ],
+              "p": 0.19966681003358522
+            },
+            "b2b": {
+              "or_per_sd": 0.7448725621005967,
+              "ci": [
+                0.605894048737974,
+                0.9157296311557801
+              ],
+              "p": 0.005182041516662315
+            }
+          }
+        },
+        "concurrent": {
+          "cov_struct": "Exchangeable",
+          "converged": true,
+          "n_iterations": 5,
+          "feature_definition": "five-game mean ending at game t (games t-4..t); INCLUDES the index game and is not pre-game",
+          "n_rows": 217453,
+          "n_clusters": 4603,
+          "n_events": 769,
+          "terms": {
+            "C(position)[T.F]": {
+              "or_per_sd": 1.0181199784518666,
+              "ci": [
+                0.78131924252795,
+                1.3266898267717353
+              ],
+              "p": 0.8942304464337675
+            },
+            "C(position)[T.G]": {
+              "or_per_sd": 0.746212201037341,
+              "ci": [
+                0.5707902662313257,
+                0.9755468548080038
+              ],
+              "p": 0.03227178434752382
+            },
+            "C(position)[T.Unstarted]": {
+              "or_per_sd": 0.8591472171935814,
+              "ci": [
+                0.5804740017941118,
+                1.271605512960223
+              ],
+              "p": 0.4479264043802791
+            },
+            "fieldGoalsAttempted_c5": {
+              "or_per_sd": 1.2473417496206427,
+              "ci": [
+                1.1626038114725392,
+                1.3382559260459084
+              ],
+              "p": 7.400103630626209e-10
+            },
+            "AGE": {
+              "or_per_sd": 0.9462308001031855,
+              "ci": [
+                0.8613899821042976,
+                1.0394278383371132
+              ],
+              "p": 0.24885391832220682
+            },
+            "BMI": {
+              "or_per_sd": 0.956883108377865,
+              "ci": [
+                0.8849476507129821,
+                1.034666041953088
+              ],
+              "p": 0.2690224371155182
+            },
+            "b2b": {
+              "or_per_sd": 0.7442148853926367,
+              "ci": [
+                0.6051105960882778,
+                0.9152968056093584
+              ],
+              "p": 0.005137005018909265
+            }
+          }
+        }
+      }
+    },
+    "Muscle/Tendon": {
+      "n_events": 1211,
+      "arms": {
+        "lagged": {
+          "cov_struct": "Exchangeable",
+          "converged": true,
+          "n_iterations": 6,
+          "feature_definition": "five-game mean ending at game t-1 (games t-5..t-1); strictly pre-game",
+          "n_rows": 217453,
+          "n_clusters": 4603,
+          "n_events": 1211,
+          "terms": {
+            "C(position)[T.F]": {
+              "or_per_sd": 0.9597059834206837,
+              "ci": [
+                0.7687625274385483,
+                1.1980755327425674
+              ],
+              "p": 0.7163344390185622
+            },
+            "C(position)[T.G]": {
+              "or_per_sd": 0.8865962863402328,
+              "ci": [
+                0.705753314962067,
+                1.1137786508229737
+              ],
+              "p": 0.3010706941268484
+            },
+            "C(position)[T.Unstarted]": {
+              "or_per_sd": 0.6090267509135547,
+              "ci": [
+                0.39100706022400433,
+                0.9486109614384665
+              ],
+              "p": 0.02828558690854406
+            },
+            "fieldGoalsAttempted_r5": {
+              "or_per_sd": 1.4828200278034307,
+              "ci": [
+                1.395616319757684,
+                1.5754725734625465
+              ],
+              "p": 3.5790473935979734e-37
+            },
+            "AGE": {
+              "or_per_sd": 1.2747319297944872,
+              "ci": [
+                1.1881901762011127,
+                1.3675769463377052
+              ],
+              "p": 1.3145043919570465e-11
+            },
+            "BMI": {
+              "or_per_sd": 0.9415927589718306,
+              "ci": [
+                0.8758435467230603,
+                1.0122777373485905
+              ],
+              "p": 0.10319737146743953
+            },
+            "b2b": {
+              "or_per_sd": 0.8449539993845676,
+              "ci": [
+                0.722970840307487,
+                0.9875187507871364
+              ],
+              "p": 0.03418765638884866
+            }
+          }
+        },
+        "concurrent": {
+          "cov_struct": "Exchangeable",
+          "converged": true,
+          "n_iterations": 6,
+          "feature_definition": "five-game mean ending at game t (games t-4..t); INCLUDES the index game and is not pre-game",
+          "n_rows": 217453,
+          "n_clusters": 4603,
+          "n_events": 1211,
+          "terms": {
+            "C(position)[T.F]": {
+              "or_per_sd": 0.983758099217309,
+              "ci": [
+                0.7887690773377797,
+                1.2269497189748653
+              ],
+              "p": 0.8844840634767924
+            },
+            "C(position)[T.G]": {
+              "or_per_sd": 0.9225418229630183,
+              "ci": [
+                0.7352382499120761,
+                1.1575613962109648
+              ],
+              "p": 0.4862400927264785
+            },
+            "C(position)[T.Unstarted]": {
+              "or_per_sd": 0.5761500065555017,
+              "ci": [
+                0.3705276639893957,
+                0.8958813668050569
+              ],
+              "p": 0.01436027902187709
+            },
+            "fieldGoalsAttempted_c5": {
+              "or_per_sd": 1.382494649089526,
+              "ci": [
+                1.3007213409543785,
+                1.4694088538278305
+              ],
+              "p": 2.191055772818274e-25
+            },
+            "AGE": {
+              "or_per_sd": 1.2686923268801589,
+              "ci": [
+                1.1832046143441386,
+                1.3603566118416444
+              ],
+              "p": 2.2870611974421312e-11
+            },
+            "BMI": {
+              "or_per_sd": 0.9479057076814246,
+              "ci": [
+                0.8819969354606461,
+                1.01873962882393
+              ],
+              "p": 0.14566208239331122
+            },
+            "b2b": {
+              "or_per_sd": 0.8424375734064145,
+              "ci": [
+                0.7204933012687473,
+                0.985021045771203
+              ],
+              "p": 0.031623255266521946
+            }
+          }
+        }
+      }
+    },
+    "Bone/Contusion": {
+      "n_events": 393,
+      "arms": {
+        "lagged": {
+          "cov_struct": "Exchangeable",
+          "converged": true,
+          "n_iterations": 6,
+          "feature_definition": "five-game mean ending at game t-1 (games t-5..t-1); strictly pre-game",
+          "n_rows": 217453,
+          "n_clusters": 4603,
+          "n_events": 393,
+          "terms": {
+            "C(position)[T.F]": {
+              "or_per_sd": 1.0473305022613133,
+              "ci": [
+                0.7235824128390853,
+                1.5159312353420484
+              ],
+              "p": 0.8063721931662334
+            },
+            "C(position)[T.G]": {
+              "or_per_sd": 0.8295273481178355,
+              "ci": [
+                0.5735912277037134,
+                1.1996620381210787
+              ],
+              "p": 0.32076385968284626
+            },
+            "C(position)[T.Unstarted]": {
+              "or_per_sd": 0.5481102742723031,
+              "ci": [
+                0.2710426318113598,
+                1.1084044998941311
+              ],
+              "p": 0.09422739029417097
+            },
+            "fieldGoalsAttempted_r5": {
+              "or_per_sd": 1.5426191742061617,
+              "ci": [
+                1.4087659414577105,
+                1.6891904088525522
+              ],
+              "p": 7.954110727655269e-21
+            },
+            "AGE": {
+              "or_per_sd": 1.0277830429584303,
+              "ci": [
+                0.907880117615556,
+                1.16352144175956
+              ],
+              "p": 0.6650225179944687
+            },
+            "BMI": {
+              "or_per_sd": 0.9879049669291489,
+              "ci": [
+                0.8518459448008867,
+                1.1456956855167115
+              ],
+              "p": 0.8721292966909839
+            },
+            "b2b": {
+              "or_per_sd": 0.6052378271872544,
+              "ci": [
+                0.4429091810496951,
+                0.8270608132127382
+              ],
+              "p": 0.0016227921057577707
+            }
+          }
+        },
+        "concurrent": {
+          "cov_struct": "Exchangeable",
+          "converged": true,
+          "n_iterations": 6,
+          "feature_definition": "five-game mean ending at game t (games t-4..t); INCLUDES the index game and is not pre-game",
+          "n_rows": 217453,
+          "n_clusters": 4603,
+          "n_events": 393,
+          "terms": {
+            "C(position)[T.F]": {
+              "or_per_sd": 1.0730023715309909,
+              "ci": [
+                0.7425471956196578,
+                1.5505197462234557
+              ],
+              "p": 0.7075557953964389
+            },
+            "C(position)[T.G]": {
+              "or_per_sd": 0.8636030251482771,
+              "ci": [
+                0.5987021740557167,
+                1.245711502921399
+              ],
+              "p": 0.4327268445665875
+            },
+            "C(position)[T.Unstarted]": {
+              "or_per_sd": 0.5231036846280159,
+              "ci": [
+                0.2591989893225213,
+                1.055704212376074
+              ],
+              "p": 0.07050442381902211
+            },
+            "fieldGoalsAttempted_c5": {
+              "or_per_sd": 1.4464298733211143,
+              "ci": [
+                1.317712021611582,
+                1.5877212502599707
+              ],
+              "p": 8.367218167526783e-15
+            },
+            "AGE": {
+              "or_per_sd": 1.025443821116254,
+              "ci": [
+                0.9068073059417167,
+                1.1596014096660678
+              ],
+              "p": 0.688768508017157
+            },
+            "BMI": {
+              "or_per_sd": 0.9943101655111957,
+              "ci": [
+                0.8569569925316022,
+                1.1536783220803728
+              ],
+              "p": 0.9400321655859929
+            },
+            "b2b": {
+              "or_per_sd": 0.6026131742283772,
+              "ci": [
+                0.4404614404690904,
+                0.8244595426261481
+              ],
+              "p": 0.001540578045245211
+            }
+          }
+        }
+      }
+    }
+  },
+  "comparison": [
+    {
+      "outcome": "Ligament/Joint",
+      "covariate": "fieldGoalsAttempted",
+      "n_events": 769,
+      "retimed": true,
+      "conc_or": 1.2473417496206427,
+      "conc_ci": "1.16-1.34",
+      "conc_p": 7.400103630626209e-10,
+      "lag_or": 1.3713013465349828,
+      "lag_ci": "1.28-1.47",
+      "lag_p": 5.965138925666605e-19
+    },
+    {
+      "outcome": "Ligament/Joint",
+      "covariate": "AGE",
+      "n_events": 769,
+      "retimed": false,
+      "conc_or": 0.9462308001031855,
+      "conc_ci": "0.86-1.04",
+      "conc_p": 0.24885391832220682,
+      "lag_or": 0.9497251141965402,
+      "lag_ci": "0.86-1.04",
+      "lag_p": 0.2860340856713093
+    },
+    {
+      "outcome": "Muscle/Tendon",
+      "covariate": "fieldGoalsAttempted",
+      "n_events": 1211,
+      "retimed": true,
+      "conc_or": 1.382494649089526,
+      "conc_ci": "1.30-1.47",
+      "conc_p": 2.191055772818274e-25,
+      "lag_or": 1.4828200278034307,
+      "lag_ci": "1.40-1.58",
+      "lag_p": 3.5790473935979734e-37
+    },
+    {
+      "outcome": "Muscle/Tendon",
+      "covariate": "AGE",
+      "n_events": 1211,
+      "retimed": false,
+      "conc_or": 1.2686923268801589,
+      "conc_ci": "1.18-1.36",
+      "conc_p": 2.2870611974421312e-11,
+      "lag_or": 1.2747319297944872,
+      "lag_ci": "1.19-1.37",
+      "lag_p": 1.3145043919570465e-11
+    },
+    {
+      "outcome": "Bone/Contusion",
+      "covariate": "fieldGoalsAttempted",
+      "n_events": 393,
+      "retimed": true,
+      "conc_or": 1.4464298733211143,
+      "conc_ci": "1.32-1.59",
+      "conc_p": 8.367218167526783e-15,
+      "lag_or": 1.5426191742061617,
+      "lag_ci": "1.41-1.69",
+      "lag_p": 7.954110727655269e-21
+    },
+    {
+      "outcome": "Bone/Contusion",
+      "covariate": "AGE",
+      "n_events": 393,
+      "retimed": false,
+      "conc_or": 1.025443821116254,
+      "conc_ci": "0.91-1.16",
+      "conc_p": 0.688768508017157,
+      "lag_or": 1.0277830429584303,
+      "lag_ci": "0.91-1.16",
+      "lag_p": 0.6650225179944687
+    }
+  ],
+  "paired_contrast": {
+    "method": "cluster bootstrap over athlete-seasons; both arms refitted inside each replicate, so the reported point estimates are unchanged and only the DIFFERENCE gains an interval",
+    "n_boot": 200,
+    "seed": 20260921,
+    "n_failed_fits": 0,
+    "runtime_seconds": 17701.9,
+    "contrasts": {
+      "Ligament/Joint|fieldGoalsAttempted": {
+        "outcome": "Ligament/Joint",
+        "covariate": "fieldGoalsAttempted",
+        "diff_log_or": -0.09474549037829388,
+        "diff_log_or_bootstrap_mean": -0.0937807256632866,
+        "diff_log_or_ci": [
+          -0.11277840830179921,
+          -0.07461978893060325
+        ],
+        "or_ratio": 0.9096044080846545,
+        "or_ratio_ci": [
+          0.8933485968172947,
+          0.9280962917376265
+        ],
+        "excludes_zero": true,
+        "n_replicates": 200
+      },
+      "Muscle/Tendon|fieldGoalsAttempted": {
+        "outcome": "Muscle/Tendon",
+        "covariate": "fieldGoalsAttempted",
+        "diff_log_or": -0.07005611500232944,
+        "diff_log_or_bootstrap_mean": -0.07035805576164272,
+        "diff_log_or_ci": [
+          -0.0832446261816981,
+          -0.05703892736356155
+        ],
+        "or_ratio": 0.9323415000925492,
+        "or_ratio_ci": [
+          0.9201260327687257,
+          0.9445572995254482
+        ],
+        "excludes_zero": true,
+        "n_replicates": 200
+      },
+      "Bone/Contusion|fieldGoalsAttempted": {
+        "outcome": "Bone/Contusion",
+        "covariate": "fieldGoalsAttempted",
+        "diff_log_or": -0.06438337022762008,
+        "diff_log_or_bootstrap_mean": -0.06466109445681899,
+        "diff_log_or_ci": [
+          -0.08585701268323455,
+          -0.043360404443042275
+        ],
+        "or_ratio": 0.9376454652623213,
+        "or_ratio_ci": [
+          0.9177254449378778,
+          0.9575662167507444
+        ],
+        "excludes_zero": true,
+        "n_replicates": 200
+      }
+    }
+  },
+  "index_game_attenuation": {
+    "fieldGoalsAttempted": {
+      "definition": "index game value minus the athlete's own mean over the five games before it (v_t - r5_t)",
+      "mean_index_game_shift_healthy": 0.03795331969499721,
+      "mean_index_game_shift_injured": -1.7611462284028654,
+      "mean_r5_healthy": 8.358778129068254,
+      "mean_r5_injured": 10.47416772018542,
+      "mean_c5_healthy": 8.368151385530965,
+      "mean_c5_injured": 10.112600084281501
+    }
+  }
+}
